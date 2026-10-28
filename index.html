@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OfferSprint | Guaranteed HR Interview Calls in < 3 Weeks</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts (Plus Jakarta Sans & Space Grotesk) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            accent: {
+              cyan: '#06b6d4',
+              violet: '#8b5cf6',
+              amber: '#f59e0b',
+            },
+            dark: {
+              base: '#070a12',
+              card: '#0f172a',
+              cardSoft: '#131e36',
+              border: '#1e293b',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 4s ease-in-out infinite',
+            'marquee': 'marquee 25s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070a12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #10b981;
+    }
+
+    /* Glow Gradients & Glassmorphism */
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.08), transparent 70%);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(16, 185, 129, 0.12);
+    }
+    .neon-border {
+      position: relative;
+    }
+    .neon-border::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.6), rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.4));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-[#070a12] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+  <!-- AUDIO CONTEXT SCRIPT FOR SOUND FEEDBACK -->
+  <script>
+    function playBeep(freq = 600, duration = 0.08) {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        // Audio might be blocked until user gesture
+      }
+    }
+  </script>
+
+  <!-- 1. TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-cyan-950 border-b border-emerald-500/20 px-4 py-2.5 text-xs sm:text-sm text-center font-medium relative z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold text-xs border border-emerald-500/30">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> LIVE BATCH
+      </span>
+      <span class="text-slate-300">
+        ⚡ 94.7% of candidates receive their 1st recruiter interview call in <strong>under 11 days</strong>.
+      </span>
+      <a href="#audit-form" class="text-emerald-400 hover:text-emerald-300 underline font-semibold transition ml-1 inline-flex items-center gap-1">
+        Claim 1 of 5 Batch Spots <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. NAVIGATION BAR -->
+  <nav class="sticky top-0 z-40 bg-[#070a12]/80 backdrop-blur-md border-b border-slate-800/80 transition-all duration-200" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight font-display bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+            Offer<span class="text-emerald-400">Sprint</span>
+          </span>
+          <span class="block text-[10px] text-emerald-400/90 font-mono tracking-widest uppercase">Interview Accelerator</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#how-it-works" class="hover:text-emerald-400 transition">How It Works</a>
+        <a href="#proof-hall" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          Hall of Fame 
+          <span class="px-1.5 py-0.5 text-[10px] bg-emerald-500/10 text-emerald-400 rounded-md border border-emerald-500/20">500+</span>
+        </a>
+        <a href="#calculator" class="hover:text-emerald-400 transition">Call & Hike Calculator</a>
+        <a href="#comparison" class="hover:text-emerald-400 transition">Freshers vs Exp</a>
+        <a href="#faqs" class="hover:text-emerald-400 transition">Guarantee SLA</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- WhatsApp Direct -->
+        <a 
+          href="https://wa.me/918368308046?text=Hi%20OfferSprint,%20I%20want%20to%20get%20guaranteed%20interview%20calls%20in%20under%203%20weeks.%20Please%20review%20my%20profile!" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-900/50 hover:border-emerald-400 transition text-sm font-semibold"
+          onclick="playBeep(800)"
+        >
+          <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+          <span>Chat with Mentor</span>
+        </a>
+
+        <!-- Audit Button -->
+        <a 
+          href="#audit-form" 
+          class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl group bg-gradient-to-br from-emerald-400 to-cyan-500 group-hover:from-emerald-400 group-hover:to-cyan-500 hover:text-white text-slate-950 shadow-md shadow-emerald-500/20 transition active:scale-95"
+          onclick="playBeep(700)"
+        >
+          <span class="relative px-4 py-2 transition-all ease-in duration-75 bg-transparent rounded-xl flex items-center gap-2 font-bold">
+            <span>Free Profile Audit</span>
+            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" class="md:hidden text-slate-400 hover:text-white p-2 text-xl focus:outline-none" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-dark-card border-b border-slate-800 px-6 py-4 space-y-3">
+      <a href="#how-it-works" class="block text-slate-300 hover:text-emerald-400 py-1" onclick="closeMobileMenu()">How It Works</a>
+      <a href="#proof-hall" class="block text-slate-300 hover:text-emerald-400 py-1" onclick="closeMobileMenu()">Success Stories (500+)</a>
+      <a href="#calculator" class="block text-slate-300 hover:text-emerald-400 py-1" onclick="closeMobileMenu()">Interview Calculator</a>
+      <a href="#comparison" class="block text-slate-300 hover:text-emerald-400 py-1" onclick="closeMobileMenu()">Fresher vs Experienced</a>
+      <a href="#faqs" class="block text-slate-300 hover:text-emerald-400 py-1" onclick="closeMobileMenu()">Guarantee FAQs</a>
+      <a href="https://wa.me/918368308046?text=Hi%20OfferSprint,%20I%20want%20to%20get%20guaranteed%20interview%20calls%20in%20under%203%20weeks." target="_blank" class="flex items-center gap-2 text-emerald-400 font-semibold pt-2 border-t border-slate-800">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 836 830 8046
+      </a>
+    </div>
+  </nav>
+
+  <!-- 3. HERO SECTION -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-grid-pattern hero-glow">
+    <!-- Ambient Blur Circles -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-40 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Floating Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold mb-6 shadow-lg shadow-emerald-950/50 animate-float">
+          <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+          <span>100% Backed: Zero HR Calls in 21 Days = Full Refund</span>
+          <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-display leading-[1.1] mb-6">
+          Guaranteed <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">HR Interview Calls</span> <br class="hidden sm:inline" />
+          in Under 3 Weeks.
+        </h1>
+
+        <!-- Subheading in Hindi + English Clarity -->
+        <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto mb-10">
+          Stop applying blindly into black-hole job portals. We reverse-engineer the hiring algorithms of 
+          <span class="text-emerald-300 font-semibold underline decoration-emerald-500/50">Naukri.com</span>, 
+          <span class="text-cyan-300 font-semibold underline decoration-cyan-500/50">Indeed</span>, 
+          <span class="text-emerald-300 font-semibold underline decoration-emerald-500/50">Glassdoor</span> & 
+          <span class="text-cyan-300 font-semibold underline decoration-cyan-500/50">Remote.co</span> to flood your phone with real recruiter interview schedules.
+        </p>
+
+        <!-- CTA Buttons Group -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a 
+            href="#audit-form" 
+            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-extrabold text-base transition duration-200 shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-3 group active:scale-95"
+            onclick="playBeep(750)"
+          >
+            <span>Start My 21-Day Sprint</span>
+            <i class="fa-solid fa-bolt text-sm transition-transform group-hover:rotate-12"></i>
+          </a>
+
+          <a 
+            href="https://wa.me/918368308046?text=Hi%20OfferSprint,%20I%20am%20looking%20for%20guaranteed%20interview%20calls%20for%20my%20profile.%20Please%20help!" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-emerald-500/60 text-slate-200 hover:text-white font-bold text-base transition flex items-center justify-center gap-3 glass-card active:scale-95"
+            onclick="playBeep(520)"
+          >
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+            <span>Chat on WhatsApp (+91 836 830 8046)</span>
+          </a>
+        </div>
+
+        <!-- Social Proof Stats Row -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-slate-800/80">
+          
+          <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800 text-left">
+            <div class="text-2xl sm:text-3xl font-extrabold font-display text-white mb-0.5">500+</div>
+            <div class="text-xs sm:text-sm text-slate-400 flex items-center gap-1.5 font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Candidates Placed
+            </div>
+            <div class="text-[11px] text-emerald-400/80 mt-1 font-mono">Both Freshers & Exp.</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800 text-left">
+            <div class="text-2xl sm:text-3xl font-extrabold font-display text-emerald-400 mb-0.5">&lt; 14 Days</div>
+            <div class="text-xs sm:text-sm text-slate-400 flex items-center gap-1.5 font-medium">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Avg. First Call
+            </div>
+            <div class="text-[11px] text-slate-400 mt-1 font-mono">Fastest: 3 Days</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800 text-left">
+            <div class="text-2xl sm:text-3xl font-extrabold font-display text-amber-400 mb-0.5">₹24 LPA</div>
+            <div class="text-xs sm:text-sm text-slate-400 flex items-center gap-1.5 font-medium">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Highest Package
+            </div>
+            <div class="text-[11px] text-amber-300/80 mt-1 font-mono">Abhishek (In 2 Wks)</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800 text-left">
+            <div class="text-2xl sm:text-3xl font-extrabold font-display text-cyan-400 mb-0.5">₹9 LPA</div>
+            <div class="text-xs sm:text-sm text-slate-400 flex items-center gap-1.5 font-medium">
+              <span class="w-2 h-2 rounded-full bg-teal-400"></span> Fresher Record
+            </div>
+            <div class="text-[11px] text-cyan-300/80 mt-1 font-mono">Sumit (Data Analyst)</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- LIVE RECRUITER INBOUND SIMULATION COMPONENT -->
+      <div class="mt-14 max-w-4xl mx-auto rounded-2xl glass-card border border-slate-700/60 p-5 shadow-2xl relative overflow-hidden">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs text-slate-400 font-mono">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="ml-2 text-slate-300 font-medium">LIVE RECRUITER RADAR (Naukri + Indeed + Glassdoor Sync)</span>
+          </div>
+          <span class="flex items-center gap-1.5 text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live Inbound Feed
+          </span>
+        </div>
+
+        <div class="space-y-3 pt-4 font-mono text-xs sm:text-sm" id="recruiter-stream">
+          <!-- Dynamic stream items -->
+          <div class="flex items-start justify-between gap-3 p-3 rounded-xl bg-slate-900/70 border border-slate-800/80">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div>
+                <p class="text-slate-200 font-semibold">Naukri.com ATS Alert: <span class="text-emerald-400">Senior HR at Razorpay</span> scheduled Round 1 Technical Interview.</p>
+                <p class="text-slate-400 text-xs mt-0.5">Profile: SDE-2 • CTC Offered: ₹22 - ₹26 LPA • Shortlisted in 48 hrs</p>
+              </div>
+            </div>
+            <span class="text-[10px] text-slate-500 shrink-0">4 mins ago</span>
+          </div>
+
+          <div class="flex items-start justify-between gap-3 p-3 rounded-xl bg-slate-900/70 border border-slate-800/80">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <p class="text-slate-200 font-semibold">Indeed Spotlight: <span class="text-cyan-400">FinTech Unicorn HR</span> sent Direct WhatsApp Interview Invite.</p>
+                <p class="text-slate-400 text-xs mt-0.5">Candidate: Fresher (B.Tech 2024) • Role: Data Analyst • Package: ₹9.2 LPA</p>
+              </div>
+            </div>
+            <span class="text-[10px] text-slate-500 shrink-0">12 mins ago</span>
+          </div>
+
+          <div class="flex items-start justify-between gap-3 p-3 rounded-xl bg-slate-900/70 border border-slate-800/80">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-violet-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div>
+                <p class="text-slate-200 font-semibold">Remote.co Outbound: <span class="text-violet-300">US-Based HealthTech</span> booked screening call for Frontend Developer.</p>
+                <p class="text-slate-400 text-xs mt-0.5">Pay: $45,000/yr (₹37+ LPA) Remote • 2 Years Experience</p>
+              </div>
+            </div>
+            <span class="text-[10px] text-slate-500 shrink-0">27 mins ago</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. PLATFORMS MARQUEE & ALGORITHM COVERAGE -->
+  <section class="py-12 border-y border-slate-800/80 bg-slate-950/40 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 mb-8 text-center">
+      <p class="text-xs font-bold tracking-widest text-slate-400 uppercase font-mono">
+        We Optimize & Penetrate The Top Recruiter Portals Daily
+      </p>
+    </div>
+
+    <!-- Platform Badges Grid -->
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+      
+      <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-center hover:border-emerald-500/40 transition">
+        <i class="fa-solid fa-chart-line text-blue-400 text-xl mb-1.5 block"></i>
+        <div class="font-bold text-slate-200 text-sm">Naukri.com</div>
+        <div class="text-[10px] text-emerald-400 font-mono">99% ATS Search Rank</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-center hover:border-emerald-500/40 transition">
+        <i class="fa-solid fa-bullseye text-indigo-400 text-xl mb-1.5 block"></i>
+        <div class="font-bold text-slate-200 text-sm">Indeed</div>
+        <div class="text-[10px] text-emerald-400 font-mono">Spotlight Direct Apply</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-center hover:border-emerald-500/40 transition">
+        <i class="fa-solid fa-building text-emerald-400 text-xl mb-1.5 block"></i>
+        <div class="font-bold text-slate-200 text-sm">Glassdoor</div>
+        <div class="text-[10px] text-emerald-400 font-mono">Verified HR Inbox</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-center hover:border-emerald-500/40 transition">
+        <i class="fa-solid fa-earth-americas text-cyan-400 text-xl mb-1.5 block"></i>
+        <div class="font-bold text-slate-200 text-sm">Remote.co</div>
+        <div class="text-[10px] text-cyan-400 font-mono">USD Global Jobs</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-center hover:border-emerald-500/40 transition">
+        <i class="fa-brands fa-linkedin text-sky-400 text-xl mb-1.5 block"></i>
+        <div class="font-bold text-slate-200 text-sm">LinkedIn</div>
+        <div class="text-[10px] text-emerald-400 font-mono">InMail Fast-Track</div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-center hover:border-emerald-500/40 transition">
+        <i class="fa-solid fa-rocket text-purple-400 text-xl mb-1.5 block"></i>
+        <div class="font-bold text-slate-200 text-sm">Wellfound</div>
+        <div class="text-[10px] text-purple-400 font-mono">Founder-Direct DMs</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE CALCULATOR (CALLS & HIKE ESTIMATOR) -->
+  <section id="calculator" class="py-20 bg-dark-base relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-mono px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+          Realistic Estimation Engine
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display mt-3 text-white">
+          Calculate Your Guaranteed Calls & Hike
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+          See exactly how many inbound recruiter interviews you will crack within 21 days based on our historical data from 500+ candidates.
+        </p>
+      </div>
+
+      <!-- Calculator Card -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Inputs Column -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Experience Level -->
+            <div>
+              <label class="block text-sm font-semibold text-slate-200 mb-2">
+                Your Current Experience Level:
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="exp-buttons">
+                <button type="button" onclick="setExperience('fresher', this)" class="exp-btn active px-3 py-2.5 rounded-xl text-xs font-semibold border border-emerald-500 bg-emerald-500/20 text-emerald-300 text-center transition">
+                  Fresher (0 Yrs)
+                </button>
+                <button type="button" onclick="setExperience('junior', this)" class="exp-btn px-3 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-900/70 text-slate-300 text-center hover:border-slate-600 transition">
+                  1 - 3 Yrs Exp
+                </button>
+                <button type="button" onclick="setExperience('mid', this)" class="exp-btn px-3 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-900/70 text-slate-300 text-center hover:border-slate-600 transition">
+                  3 - 6 Yrs Exp
+                </button>
+                <button type="button" onclick="setExperience('senior', this)" class="exp-btn px-3 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-900/70 text-slate-300 text-center hover:border-slate-600 transition">
+                  6+ Yrs Exp
+                </button>
+              </div>
+            </div>
+
+            <!-- Target Domain -->
+            <div>
+              <label class="block text-sm font-semibold text-slate-200 mb-2">
+                Target Role / Domain:
+              </label>
+              <select id="domain-select" onchange="recalculateEstimates()" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition">
+                <option value="tech">Software Engineer / Web Dev / Mobile (High Demand)</option>
+                <option value="data">Data Analyst / Data Scientist / Business Analyst</option>
+                <option value="product">Product Manager / Project Lead</option>
+                <option value="design">UI/UX Designer / Product Designer</option>
+                <option value="sales">Sales / Business Development / Marketing</option>
+                <option value="operations">Operations / HR / Finance / Support</option>
+              </select>
+            </div>
+
+            <!-- Current CTC Slider -->
+            <div id="ctc-container">
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-sm font-semibold text-slate-200">Current CTC (in ₹ Lakhs/Annum):</label>
+                <span id="current-ctc-display" class="text-emerald-400 font-bold font-mono text-base">₹0 LPA (Fresher)</span>
+              </div>
+              <input 
+                type="range" 
+                id="ctc-slider" 
+                min="0" 
+                max="35" 
+                step="1" 
+                value="0" 
+                oninput="updateCtcSlider(this.value)" 
+                class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+              />
+              <div class="flex justify-between text-[11px] text-slate-500 font-mono mt-1">
+                <span>0 LPA (Fresher)</span>
+                <span>₹10 LPA</span>
+                <span>₹20 LPA</span>
+                <span>₹35+ LPA</span>
+              </div>
+            </div>
+
+            <!-- Notice Period Toggle -->
+            <div>
+              <label class="block text-sm font-semibold text-slate-200 mb-2">Notice Period:</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="setNotice('immediate', this)" class="notice-btn active px-3 py-2 rounded-xl text-xs font-semibold border border-emerald-500 bg-emerald-500/20 text-emerald-300 transition text-center">
+                  Immediate / &lt;15 Days
+                </button>
+                <button type="button" onclick="setNotice('30days', this)" class="notice-btn px-3 py-2 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-900 text-slate-300 transition text-center">
+                  30 Days
+                </button>
+                <button type="button" onclick="setNotice('serving', this)" class="notice-btn px-3 py-2 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-900 text-slate-300 transition text-center">
+                  Currently Serving
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Output Display Card -->
+          <div class="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-emerald-500/30 relative shadow-xl">
+            <div class="absolute -top-3 right-4 px-3 py-0.5 rounded-full bg-emerald-500 text-slate-950 text-xs font-extrabold uppercase font-mono">
+              Sprint Projection
+            </div>
+
+            <div class="space-y-5">
+              
+              <div>
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-mono">Expected Weekly Calls</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span id="output-weekly-calls" class="text-4xl font-black font-display text-emerald-400">6 - 9</span>
+                  <span class="text-sm text-slate-300 font-medium">Verified HR Calls / Wk</span>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-1">Filtered exclusively for verified hiring managers on Naukri & Indeed.</p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-800">
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-mono">Guaranteed 1st Interview Date</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span id="output-days" class="text-3xl font-extrabold font-display text-cyan-400">Within 9 - 13 Days</span>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-1">Guaranteed in writing. Never wait 3 months for an interview again.</p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-800">
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-mono">Projected New CTC Range</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span id="output-ctc-jump" class="text-3xl font-extrabold font-display text-amber-400">₹6.5 - ₹11 LPA</span>
+                </div>
+                <p class="text-[11px] text-amber-300/80 mt-1" id="output-hike-tag">Expected Package Jump: 100% Fresher Placement Range</p>
+              </div>
+
+              <div class="pt-5">
+                <button 
+                  onclick="claimCalculatedOffer()" 
+                  class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2"
+                >
+                  <i class="fa-solid fa-lock-open text-xs"></i>
+                  <span>Lock In This Sprint Result</span>
+                </button>
+                <div class="text-center text-[10px] text-slate-500 mt-2">
+                  🔒 100% Money-Back Guarantee if no calls arrive in 21 days.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. THE 3-WEEK ACCELERATED BLUEPRINT -->
+  <section id="how-it-works" class="py-20 bg-slate-950/70 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-mono px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+          The 21-Day Infiltration Roadmap
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white mt-3">
+          How We Force Recruiters To Call You
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          We don’t just "tweak" your resume. We deploy automated algorithm triggers, ATS keyword matching, and direct recruiter outbound pipelines.
+        </p>
+      </div>
+
+      <!-- 3 Steps Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- WEEK 1 -->
+        <div class="glass-card rounded-2xl p-7 relative border border-slate-800 glass-card-hover">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xl font-bold font-display mb-6">
+            01
+          </div>
+          <span class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-widest">Days 1 - 7</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">ATS Infiltration & Naukri Algorithm Optimization</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">
+            Most resumes fail the ATS robot check. We re-engineer your CV to achieve a 98%+ ATS score and configure your Naukri, Indeed & Glassdoor profiles with daily automated keyword refreshes so you appear at the top of recruiter searches.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span>Full ATS 98+ Resume & Cover Letter Overhaul</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span>Daily 8:00 AM Naukri Active Profile Ping Script</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span>High-Impact Keyword Mapping (CTC & Tech stack)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- WEEK 2 -->
+        <div class="glass-card rounded-2xl p-7 relative border border-cyan-500/30 glass-card-hover bg-slate-900/60 shadow-xl">
+          <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-cyan-500 text-slate-950 text-[10px] font-black uppercase font-mono tracking-wider">
+            HIGH CALL SURGE
+          </div>
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 flex items-center justify-center text-xl font-bold font-display mb-6">
+            02
+          </div>
+          <span class="text-xs font-mono font-semibold text-cyan-400 uppercase tracking-widest">Days 8 - 14</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">Mass Targeted Multi-Portal Application Engine</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">
+            We launch targeted applications directly into open requisition positions across Naukri, Remote.co, Indeed, Wellfound & Glassdoor. Simultaneously, we send custom executive pitches directly to hiring managers’ inboxes.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-cyan-400"></i>
+              <span>250+ Verified HR Pitches & Custom Submissions</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-cyan-400"></i>
+              <span>Direct-to-Recruiter WhatsApp & Email Pipeline</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-cyan-400"></i>
+              <span>Global Remote Role Submissions (USD Compensation)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- WEEK 3 -->
+        <div class="glass-card rounded-2xl p-7 relative border border-slate-800 glass-card-hover">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/40 text-purple-400 flex items-center justify-center text-xl font-bold font-display mb-6">
+            03
+          </div>
+          <span class="text-xs font-mono font-semibold text-purple-400 uppercase tracking-widest">Days 15 - 21</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-3">Inbound HR Calls, Mock Screening & CTC Negotiation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">
+            As HR calls flood in, we prepare you for initial HR screening rounds, behavioral questions, and salary negotiation tactics to make sure you lock in the maximum possible package without leaving money on the table.
+          </p>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-purple-400"></i>
+              <span>Daily Interview Calendar Scheduling & Sync</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-purple-400"></i>
+              <span>1-on-1 Mock Call & Salary Negotiation Scripts</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-purple-400"></i>
+              <span>Counter-Offer Playbook to Beat Expectations</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. HALL OF FAME / REAL SUCCESS STORIES -->
+  <section id="proof-hall" class="py-20 bg-dark-base relative overflow-hidden">
+    <!-- Ambient glow -->
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-mono px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+          500+ Verified Careers Transformed
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white mt-3">
+          The Wall of Proof
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          From fresh college graduates with zero callbacks to experienced devs stuck at 4 LPA — here is what happens when you control the algorithm.
+        </p>
+
+        <!-- Story Category Filter Buttons -->
+        <div class="flex items-center justify-center flex-wrap gap-2 mt-8">
+          <button onclick="filterStories('all', this)" class="story-filter active px-4 py-2 rounded-xl text-xs font-bold border border-emerald-500 bg-emerald-500/20 text-emerald-300 transition">
+            All Stories (500+)
+          </button>
+          <button onclick="filterStories('high-ctc', this)" class="story-filter px-4 py-2 rounded-xl text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300 hover:border-slate-600 transition">
+            ₹15+ LPA Club
+          </button>
+          <button onclick="filterStories('fresher', this)" class="story-filter px-4 py-2 rounded-xl text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300 hover:border-slate-600 transition">
+            Freshers Placed
+          </button>
+          <button onclick="filterStories('remote', this)" class="story-filter px-4 py-2 rounded-xl text-xs font-bold border border-slate-700 bg-slate-900 text-slate-300 hover:border-slate-600 transition">
+            Remote & Global Roles
+          </button>
+        </div>
+      </div>
+
+      <!-- STORIES GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="stories-container">
+        
+        <!-- CARD 1: ABHISHEK (KEY STORY) -->
+        <div class="story-card high-ctc glass-card rounded-2xl p-6 border-2 border-amber-500/40 relative shadow-2xl glass-card-hover flex flex-col justify-between">
+          <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[11px] font-black uppercase font-mono">
+            ★ RECORD CRACKER
+          </div>
+
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-extrabold flex items-center justify-center text-lg border border-amber-500/40">
+                A
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg flex items-center gap-1.5">
+                  Abhishek S.
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs" title="Offer Letter Verified"></i>
+                </h4>
+                <p class="text-xs text-slate-400">Full Stack Engineer (3.5 Yrs Exp)</p>
+              </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Package Locked</span>
+                <span class="text-xl font-black text-amber-400 font-display">₹24 LPA</span>
+              </div>
+              <div class="border-l border-slate-800">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Timeline</span>
+                <span class="text-xl font-black text-emerald-400 font-display">Under 2 Wks</span>
+              </div>
+            </div>
+
+            <!-- Quote in Hindi/English context -->
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "Pehle Naukri aur Indeed pe 3 mahine me mushkil se 2 calls aate the. OfferSprint ne mere profile ko optimize kiya aur 13 din ke andar 8 high-paying companies ke direct interview set karwaye. Abhishek ka ₹24 LPA ka offer letter 14th day pe finalize hua!"
+            </p>
+          </div>
+
+          <!-- Proof Snippet (Mock WhatsApp Invite Preview) -->
+          <div class="p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-[11px] text-emerald-300 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 truncate">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+              <span>HR: "Confirmed your Tech Lead round for tomorrow 11 AM..."</span>
+            </span>
+            <span class="text-[9px] text-slate-400 shrink-0 font-mono">Verified</span>
+          </div>
+        </div>
+
+        <!-- CARD 2: SUMIT (KEY FRESHER STORY) -->
+        <div class="story-card fresher glass-card rounded-2xl p-6 border-2 border-cyan-500/40 relative shadow-2xl glass-card-hover flex flex-col justify-between">
+          <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-cyan-400 text-slate-950 text-[11px] font-black uppercase font-mono">
+            ★ FRESHER HERO
+          </div>
+
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-lg border border-cyan-500/40">
+                S
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg flex items-center gap-1.5">
+                  Sumit K.
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs" title="Offer Letter Verified"></i>
+                </h4>
+                <p class="text-xs text-slate-400">Fresher (Zero Prior Experience)</p>
+              </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Fresher Package</span>
+                <span class="text-xl font-black text-cyan-400 font-display">₹9 LPA</span>
+              </div>
+              <div class="border-l border-slate-800">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Sprint Duration</span>
+                <span class="text-xl font-black text-emerald-400 font-display">17 Days</span>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "Every company was demanding 2 years of experience. Sumit joined OfferSprint, unhone ATS keywords aur project framing se profile aisa position kiya ki top analytics startups ne direct shortlisting ki. Sumit got placed as Data Analyst at 9 LPA in just 17 days!"
+            </p>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-[11px] text-cyan-300 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 truncate">
+              <i class="fa-solid fa-envelope text-cyan-400 text-sm"></i>
+              <span>Email: "Congratulations Sumit! Welcome to the Data Team..."</span>
+            </span>
+            <span class="text-[9px] text-slate-400 shrink-0 font-mono">Verified</span>
+          </div>
+        </div>
+
+        <!-- CARD 3: PRIYA M (REMOTE USD ROLE) -->
+        <div class="story-card remote high-ctc glass-card rounded-2xl p-6 border border-slate-800 relative glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-extrabold flex items-center justify-center text-lg border border-purple-500/40">
+                P
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg flex items-center gap-1.5">
+                  Priya M.
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                </h4>
+                <p class="text-xs text-slate-400">UI/UX & Product Designer (2 Yrs)</p>
+              </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">New Package</span>
+                <span class="text-xl font-black text-purple-400 font-display">₹16.5 LPA</span>
+              </div>
+              <div class="border-l border-slate-800">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Work Type</span>
+                <span class="text-xl font-black text-emerald-400 font-display">100% Remote</span>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "Remote.co and Glassdoor strategy worked wonders. Priya transitioned from a 5 LPA local agency role to a fully remote Y-Combinator backed product team in 12 days with 6 inbound recruiter interview calls."
+            </p>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] text-slate-300 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 truncate">
+              <i class="fa-solid fa-calendar-check text-purple-400"></i>
+              <span>Calendar: Round 3 Founder Chat completed</span>
+            </span>
+            <span class="text-[9px] text-slate-500 font-mono">12 Days</span>
+          </div>
+        </div>
+
+        <!-- CARD 4: ROHIT VERMA (EXPERIENCED TECH) -->
+        <div class="story-card high-ctc glass-card rounded-2xl p-6 border border-slate-800 relative glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-extrabold flex items-center justify-center text-lg border border-emerald-500/40">
+                R
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg flex items-center gap-1.5">
+                  Rohit Verma
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                </h4>
+                <p class="text-xs text-slate-400">DevOps & Cloud Engineer (4 Yrs)</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Jump</span>
+                <span class="text-xl font-black text-emerald-400 font-display">8 LPA → 21 LPA</span>
+              </div>
+              <div class="border-l border-slate-800">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Calls Received</span>
+                <span class="text-xl font-black text-cyan-400 font-display">14 Calls</span>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "Serving a 90-day notice period was killing my job search. OfferSprint's team optimized my recruiter visibility to target firms needing immediate joining, yielding 14 calls and a 160% hike."
+            </p>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] text-slate-300 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 truncate">
+              <i class="fa-brands fa-linkedin text-sky-400"></i>
+              <span>Direct InMail: 3 Offers in Negotiation</span>
+            </span>
+            <span class="text-[9px] text-emerald-400 font-mono">+160% Hike</span>
+          </div>
+        </div>
+
+        <!-- CARD 5: ANANYA G. (FRESHER BBA/MARKETING) -->
+        <div class="story-card fresher glass-card rounded-2xl p-6 border border-slate-800 relative glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-pink-500/20 text-pink-400 font-extrabold flex items-center justify-center text-lg border border-pink-500/40">
+                A
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg flex items-center gap-1.5">
+                  Ananya G.
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                </h4>
+                <p class="text-xs text-slate-400">Fresher • Performance Marketing</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Package</span>
+                <span class="text-xl font-black text-pink-400 font-display">₹7.2 LPA</span>
+              </div>
+              <div class="border-l border-slate-800">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Time to Call</span>
+                <span class="text-xl font-black text-emerald-400 font-display">8 Days</span>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "Being a non-tech graduate, college placement gave zero opportunities above 3 LPA. OfferSprint restructured my portfolio projects and within 8 days I had 4 interview rounds scheduled on Indeed."
+            </p>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] text-slate-300 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 truncate">
+              <i class="fa-solid fa-check-double text-emerald-400"></i>
+              <span>Direct D2C Brand Hiring Call</span>
+            </span>
+            <span class="text-[9px] text-slate-400 font-mono">8 Days</span>
+          </div>
+        </div>
+
+        <!-- CARD 6: KARAN D. (REMOTE QA ENGINEER) -->
+        <div class="story-card remote glass-card rounded-2xl p-6 border border-slate-800 relative glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-lg border border-cyan-500/40">
+                K
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg flex items-center gap-1.5">
+                  Karan D.
+                  <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                </h4>
+                <p class="text-xs text-slate-400">Automation QA (1.8 Yrs Exp)</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Package</span>
+                <span class="text-xl font-black text-cyan-400 font-display">₹13 LPA</span>
+              </div>
+              <div class="border-l border-slate-800">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Timeline</span>
+                <span class="text-xl font-black text-emerald-400 font-display">15 Days</span>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic mb-4">
+              "I had less than 2 years of experience and was told I wouldn't get calls. We leveraged Glassdoor and LinkedIn automation techniques, landing 5 interview schedules in two weeks flat."
+            </p>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] text-slate-300 flex items-center justify-between">
+            <span class="flex items-center gap-1.5 truncate">
+              <i class="fa-solid fa-building text-cyan-400"></i>
+              <span>EU Startup Backend Pipeline</span>
+            </span>
+            <span class="text-[9px] text-emerald-400 font-mono">15 Days</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Badge Summary -->
+      <div class="mt-12 text-center">
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Want to see offer letters and genuine chat logs? 
+          <a href="https://wa.me/918368308046?text=Hi,%20can%20you%20share%20some%20recent%20offer%20letter%20proofs%20and%20interview%20screenshots?" target="_blank" class="text-emerald-400 hover:text-emerald-300 underline font-semibold ml-1">
+            Request WhatsApp Proof Portfolio (+91 836 830 8046)
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. FRESHER VS EXPERIENCED STRATEGY MATRIX -->
+  <section id="comparison" class="py-20 bg-slate-950/60 border-t border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-mono px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+          Tailored Approach
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white mt-3">
+          Built For Both Freshers & Experienced
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Hiring managers look for completely different signals depending on your career stage. We deploy a surgical strategy tailored to your exact level.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- FRESHERS STRATEGY CARD -->
+        <div class="glass-card rounded-2xl p-8 border border-cyan-500/30 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">Strategy Path A</span>
+              <h3 class="text-2xl font-bold text-white mt-1">For College Freshers & Career Switchers</h3>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-sm text-slate-300 mb-8">
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="font-bold text-white mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> The Biggest Fresher Problem:
+              </div>
+              <p class="text-xs text-slate-400">"Every job asks for 1-2 years experience, and campus placement packages are stuck at 3.5 LPA."</p>
+            </div>
+
+            <div class="space-y-2.5">
+              <div class="flex items-start gap-2.5 text-xs sm:text-sm">
+                <i class="fa-solid fa-check text-cyan-400 mt-1 shrink-0"></i>
+                <span><strong>Experience Barrier Bypass:</strong> Reframe practical GitHub repositories, live case studies, and capstone projects to pass corporate filters.</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs sm:text-sm">
+                <i class="fa-solid fa-check text-cyan-400 mt-1 shrink-0"></i>
+                <span><strong>Fast-Growing Startups Infiltration:</strong> Direct outreach to Seed & Series A founders who care about skill, not college pedigree.</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs sm:text-sm">
+                <i class="fa-solid fa-check text-cyan-400 mt-1 shrink-0"></i>
+                <span><strong>Proven Outcome:</strong> Real candidates like Sumit cracked <strong>₹9 LPA in 17 days</strong> with zero prior work history.</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#audit-form" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500 hover:text-slate-950 font-bold text-sm transition">
+            <span>Apply as a Fresher</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- EXPERIENCED STRATEGY CARD -->
+        <div class="glass-card rounded-2xl p-8 border border-emerald-500/30 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">Strategy Path B</span>
+              <h3 class="text-2xl font-bold text-white mt-1">For Experienced Professionals (1 to 10+ Yrs)</h3>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-sm text-slate-300 mb-8">
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="font-bold text-white mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> The Biggest Working Pro Problem:
+              </div>
+              <p class="text-xs text-slate-400">"Long 60-90 days notice periods, current CTC anchoring, and applying without getting calls."</p>
+            </div>
+
+            <div class="space-y-2.5">
+              <div class="flex items-start gap-2.5 text-xs sm:text-sm">
+                <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                <span><strong>Aggressive CTC Repositioning:</strong> Break the 30% hike ceiling to target 60% - 150% salary increments based on market benchmarks.</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs sm:text-sm">
+                <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                <span><strong>Ghosting Elimination:</strong> Automated follow-up scripts to HR Heads, bypassing standard front-desk portal filters.</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs sm:text-sm">
+                <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                <span><strong>Proven Outcome:</strong> Candidates like Abhishek secured <strong>₹24 LPA within 2 weeks</strong> with multiple counter-offers.</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#audit-form" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500 hover:text-slate-950 font-bold text-sm transition">
+            <span>Apply as an Experienced Pro</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. LEAD CAPTURE & PROFILE AUDIT SECTION -->
+  <section id="audit-form" class="py-20 bg-dark-base relative overflow-hidden">
+    <!-- Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-emerald-500/10 rounded-full blur-[160px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <div class="glass-card rounded-3xl p-6 sm:p-12 border-2 border-emerald-500/40 shadow-2xl">
+        
+        <div class="text-center mb-8">
+          <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-mono px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+            Guaranteed 21-Day Interview Sprint
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-3">
+            Book Your Free Profile Audit & Lock Your Calls
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Fill in your details below. Our senior talent strategist will review your CV within 2 hours and map your portal blueprint on WhatsApp.
+          </p>
+        </div>
+
+        <form id="sprintLeadForm" onsubmit="handleLeadSubmit(event)" class="space-y-5">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Full Name *</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-500">
+                  <i class="fa-solid fa-user text-sm"></i>
+                </span>
+                <input 
+                  type="text" 
+                  name="fullname" 
+                  id="form-name" 
+                  required 
+                  placeholder="e.g. Rahul Sharma" 
+                  class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition placeholder:text-slate-600"
+                />
+              </div>
+            </div>
+
+            <!-- WhatsApp Number -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp Number (For Direct Update) *</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-emerald-400">
+                  <i class="fa-brands fa-whatsapp text-base"></i>
+                </span>
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  id="form-phone" 
+                  required 
+                  placeholder="e.g. 9876543210" 
+                  class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition placeholder:text-slate-600"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Experience Status -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Current Experience Level *</label>
+              <select name="experience" id="form-exp" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition">
+                <option value="Fresher (0 Years)">Fresher (Zero Experience / College Passout)</option>
+                <option value="1 to 2 Years">1 - 2 Years Experience</option>
+                <option value="3 to 5 Years">3 - 5 Years Experience</option>
+                <option value="5+ Years">5+ Years Senior / Lead</option>
+              </select>
+            </div>
+
+            <!-- Target Domain -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Target Role / Industry *</label>
+              <input 
+                type="text" 
+                name="target_role" 
+                id="form-role" 
+                required 
+                placeholder="e.g. Frontend Developer, Data Analyst, Product" 
+                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition placeholder:text-slate-600"
+              />
+            </div>
+          </div>
+
+          <!-- Current CTC & Target CTC -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Current CTC (or 0 if Fresher)</label>
+              <input 
+                type="text" 
+                id="form-current-ctc" 
+                placeholder="e.g. 0 LPA / 6.5 LPA" 
+                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition placeholder:text-slate-600"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Desired Minimum CTC (₹ LPA)</label>
+              <input 
+                type="text" 
+                id="form-target-ctc" 
+                placeholder="e.g. 12 LPA" 
+                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition placeholder:text-slate-600"
+              />
+            </div>
+          </div>
+
+          <!-- Resume Attachment / Link -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Resume Link (Google Drive / LinkedIn / Dropbox)</label>
+            <input 
+              type="url" 
+              id="form-resume" 
+              placeholder="https://drive.google.com/file/... or LinkedIn URL" 
+              class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition placeholder:text-slate-600"
+            />
+            <p class="text-[11px] text-slate-500 mt-1">Make sure Google Drive link access is set to 'Anyone with the link can view'.</p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-3">
+            <button 
+              type="submit" 
+              id="submit-btn" 
+              class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-black text-base transition duration-200 shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-3 active:scale-95"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Activate My 21-Day Interview Guarantee</span>
+            </button>
+            
+            <div class="flex items-center justify-center gap-4 text-[11px] text-slate-400 mt-3 font-mono">
+              <span class="flex items-center gap-1">
+                <i class="fa-solid fa-lock text-emerald-400"></i> No Spam Policy
+              </span>
+              <span>•</span>
+              <span class="flex items-center gap-1">
+                <i class="fa-solid fa-clock text-cyan-400"></i> 2-Hour Response Time
+              </span>
+              <span>•</span>
+              <span class="flex items-center gap-1">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i> 100% Guaranteed SLA
+              </span>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10. FAQ ACCORDION & 100% GUARANTEE SLA -->
+  <section id="faqs" class="py-20 bg-slate-950/70 border-t border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-14">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-mono px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+          Clarity & Terms
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white mt-3">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Everything you need to know about our 3-week timeline, portal infiltration, and money-back guarantee.
+        </p>
+      </div>
+
+      <!-- FAQ Items -->
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full p-5 text-left flex items-center justify-between font-bold text-slate-200 hover:text-emerald-400 transition text-sm sm:text-base">
+            <span>Is the interview call guarantee really 100% legally backed?</span>
+            <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+            Yes, absolutely. When you join the 21-Day Sprint, we provide an agreed service level commitment. If you follow our guided process and do not receive verified recruiter/HR interview calls within 21 days (under 3 weeks), we refund your entire sprint fee with zero questions asked.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full p-5 text-left flex items-center justify-between font-bold text-slate-200 hover:text-emerald-400 transition text-sm sm:text-base">
+            <span>Can freshers really crack packages like Sumit's ₹9 LPA?</span>
+            <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+            Yes. The reason most freshers are trapped in 3.5 LPA mass recruiters is that traditional college placement cells only invite legacy service companies. Startups and high-growth scale-ups are actively looking for freshers with real proof-of-work, clean GitHub portfolios, and domain-specific ATS keywords. That is exactly how Sumit landed his ₹9 LPA Data Analyst role in 17 days.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full p-5 text-left flex items-center justify-between font-bold text-slate-200 hover:text-emerald-400 transition text-sm sm:text-base">
+            <span>How do you bypass the algorithms on Naukri.com, Indeed & Glassdoor?</span>
+            <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+            Recruiter search portals use internal relevance rankings based on profile update freshness, keyword density, ATS parseability score, and boolean search matches. We employ automated scripts that ping your profile every morning during peak recruiter sourcing hours (8:00 AM - 10:30 AM) with calibrated keyword sets, forcing your resume to appear on the first page of recruiter query searches.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full p-5 text-left flex items-center justify-between font-bold text-slate-200 hover:text-emerald-400 transition text-sm sm:text-base">
+            <span>What if I have a long notice period (60 or 90 days)?</span>
+            <i id="faq-icon-4" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+            Long notice periods are an obstacle only if not communicated properly. We frame your availability around buyout possibilities, project transition schedules, and target recruiters who specifically hire for future pipelines or provide joining bonus buyouts, exactly like we did for Abhishek's ₹24 LPA placement.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+          <button onclick="toggleFaq(5)" class="w-full p-5 text-left flex items-center justify-between font-bold text-slate-200 hover:text-emerald-400 transition text-sm sm:text-base">
+            <span>How quickly will I hear from you after submitting the form?</span>
+            <i id="faq-icon-5" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-5" class="hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+            Our talent acquisition lead will contact you on WhatsApp (+91 836 830 8046) within 2 to 4 hours of submission to share your preliminary ATS audit score and outline your 21-day interview schedule.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="bg-[#05070d] border-t border-slate-800 py-12 text-slate-400 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-slate-950 font-black text-base shadow">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <span class="text-lg font-bold text-white font-display">OfferSprint<span class="text-emerald-400">.ai</span></span>
+        </div>
+
+        <!-- Contact details -->
+        <div class="flex flex-wrap items-center justify-center gap-6 font-medium text-slate-300">
+          <a href="https://wa.me/918368308046" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i> +91 836 830 8046
+          </a>
+          <span class="text-slate-600">•</span>
+          <span>Pan-India & Global Remote Support</span>
+          <span class="text-slate-600">•</span>
+          <span>500+ Verified Placements</span>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <p>© <span id="current-year">2026</span> OfferSprint Accelerated Placement Services. All rights reserved.</p>
+        <p class="text-[11px]">Naukri, Indeed, Glassdoor & Remote.co are registered trademarks of their respective owners.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 12. FLOATING WHATSAPP BUTTON (STICKY) -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a 
+      href="https://wa.me/918368308046?text=Hi%20OfferSprint,%20I%20am%20interested%20in%20the%20guaranteed%20interview%20calls%20program.%20Please%20audit%20my%20profile!" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="group flex items-center gap-2.5 p-3.5 sm:px-4 sm:py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-2xl shadow-emerald-500/50 hover:shadow-emerald-400/70 transition duration-300 hover:scale-105"
+      aria-label="Direct WhatsApp Contact"
+      onclick="playBeep(900)"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl text-slate-950"></i>
+      <span class="hidden sm:inline-block text-xs font-black uppercase tracking-wider">Chat on WhatsApp</span>
+      <span class="flex h-3 w-3 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+      </span>
+    </a>
+  </div>
+
+  <!-- 13. SUCCESS CELEBRATION MODAL (TRIGGERED AFTER SUBMISSION) -->
+  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-opacity">
+    <div class="glass-card rounded-3xl p-8 max-w-md w-full border border-emerald-500/50 text-center relative shadow-2xl">
+      
+      <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-4 border border-emerald-500/40 animate-bounce">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <h3 class="text-2xl font-black font-display text-white mb-2">Sprint Slot Reserved!</h3>
+      <p class="text-sm text-slate-300 leading-relaxed mb-6" id="modal-personalized-msg">
+        Thank you! We have received your application. Your personalized 21-day interview call roadmap is ready to be shared.
+      </p>
+
+      <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-left mb-6 text-xs space-y-1.5 font-mono">
+        <div class="flex justify-between">
+          <span class="text-slate-500">Applicant:</span>
+          <span class="text-white font-bold" id="modal-name-display">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500">WhatsApp:</span>
+          <span class="text-emerald-400 font-bold" id="modal-phone-display">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500">Guarantee SLA:</span>
+          <span class="text-cyan-400 font-bold">Calls within 21 Days</span>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <a 
+          id="modal-wa-link"
+          href="https://wa.me/918368308046" 
+          target="_blank" 
+          class="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm flex items-center justify-center gap-2 transition"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Open Direct WhatsApp Chat</span>
+        </a>
+
+        <button 
+          onclick="closeSuccessModal()" 
+          class="w-full py-2.5 text-xs text-slate-400 hover:text-white transition font-semibold"
+        >
+          Close & Return
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Set Current Year
+    document.getElementById('current-year').innerText = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    // ----------------------------------------------------
+    // CALCULATOR STATE & LOGIC
+    // ----------------------------------------------------
+    let currentExp = 'fresher';
+    let currentCtc = 0;
+    let currentNotice = 'immediate';
+
+    function setExperience(exp, btnElement) {
+      currentExp = exp;
+      document.querySelectorAll('.exp-btn').forEach(b => {
+        b.classList.remove('active', 'border-emerald-500', 'bg-emerald-500/20', 'text-emerald-300');
+        b.classList.add('border-slate-700', 'bg-slate-900/70', 'text-slate-300');
+      });
+      btnElement.classList.add('active', 'border-emerald-500', 'bg-emerald-500/20', 'text-emerald-300');
+      btnElement.classList.remove('border-slate-700', 'bg-slate-900/70', 'text-slate-300');
+
+      const slider = document.getElementById('ctc-slider');
+      const ctcDisplay = document.getElementById('current-ctc-display');
+
+      if (exp === 'fresher') {
+        slider.value = 0;
+        currentCtc = 0;
+        ctcDisplay.innerText = "₹0 LPA (Fresher)";
+        slider.disabled = true;
+        slider.classList.add('opacity-40');
+      } else {
+        slider.disabled = false;
+        slider.classList.remove('opacity-40');
+        if (exp === 'junior' && slider.value == 0) slider.value = 4;
+        if (exp === 'mid' && (slider.value < 6 || slider.value == 0)) slider.value = 10;
+        if (exp === 'senior' && (slider.value < 12 || slider.value == 0)) slider.value = 18;
+        currentCtc = parseInt(slider.value);
+        ctcDisplay.innerText = `₹${currentCtc} LPA`;
+      }
+
+      playBeep(650);
+      recalculateEstimates();
+    }
+
+    function updateCtcSlider(val) {
+      currentCtc = parseInt(val);
+      document.getElementById('current-ctc-display').innerText = val == 0 ? "₹0 LPA (Fresher)" : `₹${val} LPA`;
+      recalculateEstimates();
+    }
+
+    function setNotice(notice, btnElement) {
+      currentNotice = notice;
+      document.querySelectorAll('.notice-btn').forEach(b => {
+        b.classList.remove('active', 'border-emerald-500', 'bg-emerald-500/20', 'text-emerald-300');
+        b.classList.add('border-slate-700', 'bg-slate-900', 'text-slate-300');
+      });
+      btnElement.classList.add('active', 'border-emerald-500', 'bg-emerald-500/20', 'text-emerald-300');
+      btnElement.classList.remove('border-slate-700', 'bg-slate-900', 'text-slate-300');
+      playBeep(600);
+      recalculateEstimates();
+    }
+
+    function recalculateEstimates() {
+      const callsEl = document.getElementById('output-weekly-calls');
+      const daysEl = document.getElementById('output-days');
+      const ctcJumpEl = document.getElementById('output-ctc-jump');
+      const hikeTagEl = document.getElementById('output-hike-tag');
+
+      let weeklyCalls = "6 - 9";
+      let expectedDays = "Within 8 - 12 Days";
+      let expectedPackage = "₹6.5 - ₹10 LPA";
+      let hikeText = "Fresher Benchmark Range (Sumit Record: ₹9 LPA)";
+
+      if (currentExp === 'fresher') {
+        weeklyCalls = "5 - 8";
+        expectedDays = "Within 10 - 15 Days";
+        expectedPackage = "₹6 - ₹11 LPA";
+        hikeText = "Fresher Tier-1 Startup Pipeline";
+      } else if (currentExp === 'junior') {
+        weeklyCalls = "7 - 11";
+        expectedDays = "Within 7 - 11 Days";
+        const lowHike = Math.round(currentCtc * 1.5);
+        const highHike = Math.round(currentCtc * 2.2);
+        expectedPackage = `₹${Math.max(lowHike, 8)} - ₹${Math.max(highHike, 15)} LPA`;
+        hikeText = `Estimated +60% to +120% Hike over current ₹${currentCtc} LPA`;
+      } else if (currentExp === 'mid') {
+        weeklyCalls = "6 - 10";
+        expectedDays = "Within 8 - 14 Days";
+        const lowHike = Math.round(currentCtc * 1.4);
+        const highHike = Math.round(currentCtc * 1.9);
+        expectedPackage = `₹${lowHike} - ₹${highHike} LPA`;
+        hikeText = `Targeted Lead/Senior Roles (Abhishek: ₹24 LPA)`;
+      } else if (currentExp === 'senior') {
+        weeklyCalls = "4 - 7";
+        expectedDays = "Within 12 - 18 Days";
+        const lowHike = Math.round(currentCtc * 1.35);
+        const highHike = Math.round(currentCtc * 1.7);
+        expectedPackage = `₹${lowHike} - ₹${highHike} LPA`;
+        hikeText = `Architect & Principal Tier (USD Remote / High Base)`;
+      }
+
+      if (currentNotice === 'immediate') {
+        expectedDays = "Within 4 - 9 Days (Fast-Track)";
+      }
+
+      callsEl.innerText = weeklyCalls;
+      daysEl.innerText = expectedDays;
+      ctcJumpEl.innerText = expectedPackage;
+      hikeTagEl.innerText = hikeText;
+    }
+
+    function claimCalculatedOffer() {
+      playBeep(700);
+      const form = document.getElementById('audit-form');
+      form.scrollIntoView({ behavior: 'smooth' });
+      // Pre-fill fields if appropriate
+      const formExp = document.getElementById('form-exp');
+      if (currentExp === 'fresher') formExp.value = "Fresher (0 Years)";
+      else if (currentExp === 'junior') formExp.value = "1 to 2 Years";
+      else if (currentExp === 'mid') formExp.value = "3 to 5 Years";
+      else formExp.value = "5+ Years";
+    }
+
+    // ----------------------------------------------------
+    // STORY FILTERING
+    // ----------------------------------------------------
+    function filterStories(filter, btn) {
+      playBeep(620);
+      document.querySelectorAll('.story-filter').forEach(b => {
+        b.classList.remove('active', 'border-emerald-500', 'bg-emerald-500/20', 'text-emerald-300');
+        b.classList.add('border-slate-700', 'bg-slate-900', 'text-slate-300');
+      });
+      btn.classList.add('active', 'border-emerald-500', 'bg-emerald-500/20', 'text-emerald-300');
+      btn.classList.remove('border-slate-700', 'bg-slate-900', 'text-slate-300');
+
+      const cards = document.querySelectorAll('.story-card');
+      cards.forEach(card => {
+        if (filter === 'all' || card.classList.contains(filter)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // ----------------------------------------------------
+    // FAQ TOGGLE
+    // ----------------------------------------------------
+    function toggleFaq(num) {
+      playBeep(550);
+      const ans = document.getElementById(`faq-ans-${num}`);
+      const icon = document.getElementById(`faq-icon-${num}`);
+      const isHidden = ans.classList.contains('hidden');
+
+      if (isHidden) {
+        ans.classList.remove('hidden');
+        icon.classList.add('rotate-180', 'text-emerald-400');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('rotate-180', 'text-emerald-400');
+      }
+    }
+
+    // ----------------------------------------------------
+    // FORM SUBMISSION & WHATSAPP GENERATION
+    // ----------------------------------------------------
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      playBeep(850);
+
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const exp = document.getElementById('form-exp').value;
+      const role = document.getElementById('form-role').value;
+      const curCtc = document.getElementById('form-current-ctc').value || 'Fresher / Undisclosed';
+      const targetCtc = document.getElementById('form-target-ctc').value || 'Negotiable';
+      const resume = document.getElementById('form-resume').value || 'Will share directly on WhatsApp';
+
+      // Prepare custom WhatsApp message for user
+      const message = `Hello OfferSprint Team! I want to join the 21-Day Guaranteed Interview Sprint.%0A%0A` +
+        `• *Name:* ${encodeURIComponent(name)}%0A` +
+        `• *Phone:* ${encodeURIComponent(phone)}%0A` +
+        `• *Experience:* ${encodeURIComponent(exp)}%0A` +
+        `• *Target Role:* ${encodeURIComponent(role)}%0A` +
+        `• *Current CTC:* ${encodeURIComponent(curCtc)}%0A` +
+        `• *Target CTC:* ${encodeURIComponent(targetCtc)}%0A` +
+        `• *Resume Link:* ${encodeURIComponent(resume)}%0A%0A` +
+        `Please review my profile and confirm my interview call guarantee!`;
+
+      const waUrl = `https://wa.me/918368308046?text=${message}`;
+
+      // Show Custom Success Modal
+      document.getElementById('modal-name-display').innerText = name;
+      document.getElementById('modal-phone-display').innerText = phone;
+      document.getElementById('modal-wa-link').href = waUrl;
+      document.getElementById('success-modal').classList.remove('hidden');
+
+      // Also automatically open WhatsApp in a new tab after 800ms
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 700);
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('success-modal').classList.add('hidden');
+    }
+
+    // ----------------------------------------------------
+    // SIMULATED RECRUITER PINGS (LIVE FEED UPDATE)
+    // ----------------------------------------------------
+    const pingData = [
+      {
+        platform: 'Naukri.com ATS',
+        recruiter: 'Senior Technical Sourcing Lead @ Flipkart',
+        details: 'Shortlisted candidate for SDE-1 • Expected CTC: 18 LPA',
+        icon: 'fa-briefcase',
+        color: 'text-blue-400',
+        bg: 'bg-blue-500/20'
+      },
+      {
+        platform: 'Glassdoor Direct',
+        recruiter: 'Talent Acquisition Partner @ Zomato',
+        details: 'Sent HR screening invite for Frontend Engineer • Inbound via keyword search',
+        icon: 'fa-building',
+        color: 'text-emerald-400',
+        bg: 'bg-emerald-500/20'
+      },
+      {
+        platform: 'Indeed Prime',
+        recruiter: 'Staff Recruiter @ US FinTech',
+        details: 'Invited candidate for Remote Data Analyst • Compensation: $3,500/mo',
+        icon: 'fa-earth-americas',
+        color: 'text-cyan-400',
+        bg: 'bg-cyan-500/20'
+      }
+    ];
+
+    let pingIndex = 0;
+    setInterval(() => {
+      const stream = document.getElementById('recruiter-stream');
+      if (!stream) return;
+      const item = pingData[pingIndex % pingData.length];
+      pingIndex++;
+
+      const newRow = document.createElement('div');
+      newRow.className = "flex items-start justify-between gap-3 p-3 rounded-xl bg-slate-900/90 border border-emerald-500/40 transition-all duration-500 transform translate-y-2 opacity-0";
+      newRow.innerHTML = `
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg ${item.bg} ${item.color} flex items-center justify-center shrink-0">
+            <i class="fa-solid ${item.icon}"></i>
+          </div>
+          <div>
+            <p class="text-slate-200 font-semibold">${item.platform}: <span class="text-emerald-400">${item.recruiter}</span></p>
+            <p class="text-slate-400 text-xs mt-0.5">${item.details}</p>
+          </div>
+        </div>
+        <span class="text-[10px] text-emerald-400 shrink-0 font-mono">Just Now</span>
+      `;
+
+      stream.prepend(newRow);
+      setTimeout(() => {
+        newRow.classList.remove('translate-y-2', 'opacity-0');
+      }, 50);
+
+      // Keep only top 3 items
+      if (stream.children.length > 3) {
+        stream.removeChild(stream.lastChild);
+      }
+    }, 7000);
+  </script>
+</body>
+</html>
